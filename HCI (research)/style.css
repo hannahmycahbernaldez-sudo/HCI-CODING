@@ -1,0 +1,78 @@
+body {
+    font-family: Arial;
+    background: #26107B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+h1 {
+    color: #5c00ef;
+}
+
+input, select, textarea {
+    width: 90%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4108b4;
+    color: rgb(243, 239, 239);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+/* Submit button hover effect */
+button:hover {
+    background: #3a078b;
+}
+
+/* Logout button styling */
+.logout-btn {
+    margin-top: 20px;
+    background: #962525;
+}
+
+/* Logout hover (separate effect) */
+.logout-btn:hover {
+    background: #802323;
+
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Prevent visited link from changing color */
+a:visited {
+    color: blue;
+}
+
+/* Optional hover effect */
+a:hover {
+    text-decoration: underline;
+}
+.logo {
+    width: 300px;      /* adjust size like your preview */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto; /* center + spacing */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RequestHub - Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Request Submitted Successfully!</h2>
+
+    <p><strong>Name:</strong> <span id="cName"></span></p>
+    <p><strong>Student ID:</strong> <span id="cId"></span></p>
+    <p><strong>Course:</strong> <span id="cCourse"></span></p>
+    <p><strong>Request Type:</strong> <span id="cRequest"></span></p>
+    <p><strong>Purpose:</strong> <span id="cPurpose"></span></p>
+
+    <!-- NEW MESSAGE -->
+    <p style="margin-top:15px; color: green;">
+    Please wait for an email confirmation if your request is ready. You can claim your request after 3 days at Registrar Office.
+
+    <button onclick="goBack()">Submit Another Request</button>
+</div>
+
+<script>
+    // PROTECT PAGE (must be logged in)
+    const loggedIn = localStorage.getItem("loggedIn");
+    if (!loggedIn) {
+        window.location.href = "index.html";
+    }
+
+    // GET DATA
+    let data = JSON.parse(localStorage.getItem("requestData"));
+
+    if (data) {
+        document.getElementById("cName").textContent = data.name;
+        document.getElementById("cId").textContent = data.studentId;
+        document.getElementById("cCourse").textContent = data.course;
+        document.getElementById("cRequest").textContent = data.requestType;
+        document.getElementById("cPurpose").textContent = data.purpose;
+    }
+
+    function goBack() {
+        window.location.href = "request.html";
+    }
+</script>
+
+</body>
+</html>

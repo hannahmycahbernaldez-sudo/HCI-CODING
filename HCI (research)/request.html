@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RequestHub - Request Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Request Form</h2>
+
+    <form id="requestForm">
+        <label>Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label>Student ID:</label>
+        <input type="text" id="studentId" required>
+
+        <label>Course:</label>
+        <input type="text" id="course" required>
+
+        <label>Request Type:</label>
+        <select id="requestType">
+            <option value="TOR">Transcript of Records (100 pesos)</option>
+            <option value="Good Moral">Good Moral Certificate (150 pesos)</option>
+            <option value="Enrollment">Enrollment Certificate (50 pesos)</option>
+            <option value="Form 137">Form 137 (50 pesos)</option>
+        </select>
+
+        <label>Purpose:</label>
+        <textarea id="purpose" required></textarea>
+
+        <!-- ✅ PAYMENT METHOD -->
+        <label>Payment Method:</label>
+        <select id="paymentMethod" required>
+            <option value="">-- Select Payment --</option>
+            <option value="GCash">GCash</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Pay in Person">Pay in Person (upon claiming)</option>
+        </select>
+
+        <!-- ✅ CONTACT / REFERENCE NUMBER -->
+        <label>Contact / Reference Number:</label>
+        <input type="tel" id="contactNumber" placeholder="Enter your number or reference no." required pattern="[0-9]+">
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
