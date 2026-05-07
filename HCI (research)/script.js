@@ -59,7 +59,7 @@ if (requestForm) {
 
         const paymentMethod = document.getElementById("paymentMethod").value;
 
-        // ✅ CHECK PAYMENT
+        //  CHECK PAYMENT
         let isPaid = false;
 
         if (paymentMethod === "GCash" || paymentMethod === "Credit Card") {
@@ -75,7 +75,7 @@ if (requestForm) {
             purpose: document.getElementById("purpose").value,
             paymentMethod: paymentMethod,
             contactNumber: document.getElementById("contactNumber").value,
-            paid: isPaid // ✅ IMPORTANT
+            paid: isPaid //  IMPORTANT
         };
 
         localStorage.setItem("requestData", JSON.stringify(data));
